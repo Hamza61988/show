@@ -83,7 +83,7 @@ export default function Fulldown() {
 
           {/* Gmail */}
           <a
-            href="mailto:deadshot6198@gmail.com"
+            href="mailto:thorsfinn1337@gmail.com"
             className="transition-transform duration-300 text-black hover:scale-110"
           >
             <SiGmail title="Gmail" />
