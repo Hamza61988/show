@@ -9,12 +9,12 @@ export default function Middle() {
 
       <div className="bg-gradient-to-br from-[#f1f5f9] via-[#e2e8f0] to-[#cbd5e1] px-8 py-16 relative">
         <div className="max-w-5xl mx-auto text-center mb-16">
-          {/* Heading */}
+      
           <h2 className="text-5xl font-bold text-black pb-2">
             Project's Showcase
           </h2>
 
-          {/* Description */}
+          
           <p className="text-xl text-gray-700 mt-8 leading-relaxed">
             Explore my responsive shop management application built with{' '}
             <span className="font-semibold text-black">Next.js</span>. Designed for both desktop and mobile, this project demonstrates modern UI/UX principles and scalability.
@@ -36,7 +36,7 @@ export default function Middle() {
             </div>
           </Link>
 
-          {/* Mobile */}
+    
           <Link href="https://bigdawg-hamza61988s-projects.vercel.app/" target="_blank">
             <div className="flex flex-col items-center text-center space-y-4 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
               <Image
