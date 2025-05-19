@@ -22,7 +22,7 @@ export default function Fulldown() {
       <div className="grid gap-8 md:grid-cols-2 place-items-center">
        
        <a
-          href="https://civilianism-git-main-hamza61988s-projects.vercel.app"
+          href="https://hamza61988.github.io/password_maker/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full max-w-[600px] transform transition-transform duration-300 hover:scale-105"
@@ -53,7 +53,7 @@ export default function Fulldown() {
         </a>
 
          <a
-          href="https://civilianism-git-main-hamza61988s-projects.vercel.app"
+          href="https://hamza61988.github.io"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full max-w-[600px] transform transition-transform duration-300 hover:scale-105"
