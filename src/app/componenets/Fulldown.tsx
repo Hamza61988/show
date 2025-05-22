@@ -1,13 +1,42 @@
 'use client';
-import Image from 'next/image';
+
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
 import { FaGithub } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { FaWhatsapp } from "react-icons/fa";
 
 
+
+// Array with image and link
+const slides = [
+  {
+    src: "weather.png",
+    href: "https://hamza61988.github.io",
+  },
+  {
+    src: "fulldown2.png",
+    href: "https://civilianism-git-main-hamza61988s-projects.vercel.app",
+  },
+  {
+    src: "fulldown1.png",
+    href: "https://hamza61988.github.io/password_maker/",
+  },
+  {
+    src: "olx.png",
+    href: "https://github.com/Hamza61988/hoelx",
+  },
+];
+
 export default function Fulldown() {
+
+  
   return (
-    <div className="bg-gradient-to-br from-[#f1f5f9] via-[#e2e8f0] to-[#cbd5e1] px-6 py-20 min-h-screen">
+    <div>
+    <div className="bg-gradient-to-br from-[#f1f5f9] via-[#e2e8f0] to-[#cbd5e1] px-6 py-20 min-h-screen  flex flex-col items-center">
       
     
       <div className="max-w-5xl mx-auto text-center mb-16">
@@ -18,68 +47,48 @@ export default function Fulldown() {
         </p>
       </div>
 
-      
-      <div className="grid gap-8 md:grid-cols-2 place-items-center">
-       
-       <a
-          href="https://hamza61988.github.io/password_maker/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full max-w-[600px] transform transition-transform duration-300 hover:scale-105"
-        >
-          <Image
-            width={600}
-            height={300}
-            src="/password.png"
-            alt="password UI"
-            className="rounded-lg shadow-md border border-gray-300"
-          />
-        </a>
+        <div className="w-full max-w-6xl">
+              <Swiper
+                modules={[Autoplay]}
+                spaceBetween={200}
+                slidesPerView={"auto"}
+                centeredSlides={true}
+                loop={true}
+                autoplay={{
+                  delay: 3300,
+                  disableOnInteraction: false,
+                }}
+                className="peek-slider"
+              >
+                {slides.map((slide, index) => (
+                  <SwiperSlide key={index} className="peek-slide">
+                    <a href={slide.href} target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={slide.src}
+                        alt={`Slide ${index + 1}`}
+                        className="w-full h-[550px] object-cover rounded-xl shadow-2xl transition-transform l hover:scale-101"
+                      />
+                    </a>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+</div>
+<div className="w-full overflow-hidden leading-none -mb-1">
+  <svg
+    viewBox="0 0 1440 150"
+    className="w-full h-[100px]"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0,0 C400,150 1040,-50 1440,100 L1440,0 L0,0 Z"
+      fill="#f1f5f9"
+    />
+  </svg>
+</div>
 
-        {/* Project 2 - Civilianism Design */}
-        <a
-          href="https://civilianism-git-main-hamza61988s-projects.vercel.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full max-w-[600px] transform transition-transform duration-300 hover:scale-105"
-        >
-          <Image
-            width={600}
-            height={300}
-            src="/fulldown2.png"
-            alt="Civilianism UI"
-            className="rounded-lg shadow-md border border-gray-300"
-          />
-        </a>
-
-         <a
-          href="https://hamza61988.github.io"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full max-w-[600px] transform transition-transform duration-300 hover:scale-105"
-        >
-          <Image
-            width={600}
-            height={300}
-            src="/weather.png"
-            alt="weather"
-            className="rounded-lg shadow-md border border-gray-300"
-          />
-        </a>
-
-
-        {/* Project 4 - OLX Clone */}
-        <a
-          href="https://github.com/Hamza61988/hoelx"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full max-w-[600px] h-[300px] bg-black shadow-md border border-gray-300 rounded-lg flex items-center justify-center text-2xl font-semibold text-white transition-transform duration-300 hover:scale-105"
-        >
-          OLX-Web
-        </a>
-      </div>
-
-      <div className="mt-24 text-center space-y-6">
+ <div className="m-24  text-center space-y-6">
         <h2 className="text-4xl font-bold text-black">Contact Me</h2>
         <p className="text-lg text-gray-700">Feel free to reach out through the platforms below:</p>
         
@@ -119,6 +128,8 @@ export default function Fulldown() {
           </a>
         </div>
       </div>
+
+
     </div>
   );
 }
