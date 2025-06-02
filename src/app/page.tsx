@@ -73,7 +73,7 @@ toggleActions: "play reverse play reverse",
         </div>
       </div>
 
-      {/* Divider */}
+   
       <hr />
     </div>
   );
