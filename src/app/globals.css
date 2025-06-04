@@ -1,25 +1,31 @@
 @import "tailwindcss";
-/* In your global stylesheet (e.g., globals.css) */
-.custom-blur {
-  filter: blur(58px); /* Adjust the value for stronger blur */
-}
-@layer utilities {
-  .animate-zoom {
-    animation: zoomInOut 3s ease-in-out forwards;
+
+
+
+@layer base {
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #000000;
+    --text-subtle: #1f2937;   
+    --text-muted: #4b5563;      
+    --gradient-from: #f1f5f9;
+    --gradient-via: #e2e8f0;
+    --gradient-to: #cbd5e1;
+    
   }
 
-  @keyframes zoomInOut {
-    0% {
-      transform: scale(1.2);
-      opacity: 0;
-    }
-    50% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
+  .dark {
+    --color-bg: #000000;
+    --color-text: #ffffff;
+    --text-subtle: #d1d5db;    
+    --text-muted: #9ca3af;      
+    --gradient-from: #000000;
+    --gradient-via: #111827;
+    --gradient-to: #1f2937;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
   }
 }

@@ -1,58 +1,43 @@
 'use client';
 
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
 import { FaGithub } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from 'react-icons/fa';
 
 const slides = [
-  {
-    src: "weather.png",
-    href: "https://hamza61988.github.io",
-  },
-  {
-    src: "fulldown2.png",
-    href: "https://civilianism-git-main-hamza61988s-projects.vercel.app",
-  },
-  {
-    src: "fulldown1.png",
-    href: "https://hamza61988.github.io/password_maker/",
-  },
-  {
-    src: "olx.png",
-    href: "https://github.com/Hamza61988/hoelx",
-  },
+  { src: 'weather.png', href: 'https://hamza61988.github.io' },
+  { src: 'fulldown2.png', href: 'https://civilianism-git-main-hamza61988s-projects.vercel.app' },
+  { src: 'fulldown1.png', href: 'https://hamza61988.github.io/password_maker/' },
+  { src: 'olx.png', href: 'https://github.com/Hamza61988/hoelx' },
 ];
 
 export default function Fulldown() {
   return (
-    <div>
-      <div className="bg-gradient-to-br from-[#f1f5f9] via-[#e2e8f0] to-[#cbd5e1] px-6 py-20 min-h-screen flex flex-col items-center">
-
+    <div className="bg-[var(--color-bg)]  text-[var(--color-text)] transition-colors ">
+      {/* Project Slider Section */}
+      <div className="bg-gradient-to-br from-[var(--gradient-from)] via-[var(--gradient-via)] to-[var(--gradient-to)] px-6 py-20 min-h-screen transition-colors duration-500 flex flex-col items-center">
         <div className="max-w-5xl mx-auto text-center mb-16">
-          <h2 className="text-5xl font-bold text-black mb-4">Other Projects</h2>
-          <p className="text-xl text-gray-700 leading-relaxed">
+          <h2 className="text-5xl font-bold text-[var(--color-text)] mb-4">Other Projects</h2>
+          <p className="text-xl text-[var(--text-muted)] leading-relaxed">
             These are designs and GitHub projects I have built myself using{' '}
-            <span className="font-semibold text-black">React</span>. Check out my work to explore my skills in creating modern, responsive web applications.
+            <span className="font-semibold text-[var(--color-text)]">React</span>. Check out my work to explore my skills in creating modern, responsive web applications.
           </p>
         </div>
 
-   
-        <div className="w-full max-w-6xl hidden sm:block">
+        {/* Swiper for Desktop */}
+        <div className="w-full  hover:scale-105 transition  border border-gray-700 rounded-xl  max-w-6xl hidden sm:block">
           <Swiper
             modules={[Autoplay]}
             spaceBetween={200}
-            slidesPerView={"auto"}
-            centeredSlides={true}
-            loop={true}
-            autoplay={{
-              delay: 3300,
-              disableOnInteraction: false,
-            }}
+            slidesPerView="auto"
+            centeredSlides
+            loop
+            autoplay={{ delay: 3300, disableOnInteraction: false }}
             className="peek-slider"
           >
             {slides.map((slide, index) => (
@@ -61,7 +46,7 @@ export default function Fulldown() {
                   <img
                     src={slide.src}
                     alt={`Slide ${index + 1}`}
-                    className="w-full h-[560px] object-fill rounded-xl shadow-2xl transition-transform hover:scale-105"
+                    className="w-full h-[560px] object-fill rounded-xl shadow-2xl transition-transform"
                   />
                 </a>
               </SwiperSlide>
@@ -69,10 +54,10 @@ export default function Fulldown() {
           </Swiper>
         </div>
 
-      
-        <div>
+        {/* Mobile Slide Previews */}
+        <div className=" sm:hidden">
           {slides.map((slide, index) => (
-            <div key={index} className="mt-6 flex justify-center sm:hidden">
+            <div key={index} className="mt-6 flex  justify-center">
               <a href={slide.href} target="_blank" rel="noopener noreferrer">
                 <img
                   src={slide.src}
@@ -83,43 +68,54 @@ export default function Fulldown() {
             </div>
           ))}
         </div>
-
       </div>
 
       <div className="w-full overflow-hidden leading-none -mb-1">
-        <svg
-          viewBox="0 0 1440 150"
-          className="w-full h-[100px]"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0,0 C400,150 1040,-50 1440,100 L1440,0 L0,0 Z"
-            fill="#f1f5f9"
-          />
-        </svg>
+       <div className="svg-wrapper" style={{ transition: 'background-color 500ms, --gradient-from 500ms, --gradient-to 500ms' }}>
+  <svg
+    viewBox="0 0 1440 150"
+    className="w-full h-[100px]"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="var(--gradient-from)" />
+        <stop offset="100%" stopColor="var(--gradient-to)" />
+      </linearGradient>
+    </defs>
+
+    <path
+      d="M0,0 C400,150 1040,-50 1440,100 L1440,0 L0,0 Z"
+      fill="url(#gradient)"
+    />
+  </svg>
+</div>
+
       </div>
 
       <div className="m-24 text-center space-y-6 px-4 sm:px-0">
-        <h2 className="text-4xl font-bold text-black">Contact Me</h2>
-        <p className="text-lg text-gray-700">Feel free to reach out through the platforms below:</p>
+        <h2 className="text-4xl font-bold text-[var(--color-text)]">Contact Me</h2>
+        <p className="text-lg text-[var(--text-muted)]">
+          Feel free to reach out through the platforms below:
+        </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-10 mt-10 text-4xl text-gray-800">
+        <div className="flex flex-col sm:flex-row justify-center gap-10 mt-10 text-4xl text-[var(--text-muted)]">
           <a
             href="https://github.com/hamza61988"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform duration-300 hover:text-black hover:scale-110 flex flex-col items-center"
+            className="transition-transform  hover:text-[var(--color-text)] hover:scale-110 flex flex-col items-center"
           >
             <FaGithub className="ml-1" title="GitHub" />
-            <span className="text-lg mt-1">Github</span>
+            <span className="text-lg mt-1">GitHub</span>
           </a>
 
           <a
             href="https://mail.google.com/mail/?view=cm&fs=1&to=thorsfinn1337@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform duration-300 text-black hover:scale-110 flex flex-col items-center"
+            className="transition-transform  hover:text-[var(--color-text)] hover:scale-110 flex flex-col items-center"
           >
             <SiGmail title="Gmail" />
             <span className="text-lg mt-1">Email</span>
@@ -129,10 +125,10 @@ export default function Fulldown() {
             href="https://wa.me/+923104824350"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-transform duration-300 text-black hover:scale-110 flex flex-col items-center"
+            className="transition-transform  hover:text-[var(--color-text)] hover:scale-110 flex flex-col items-center"
           >
-            <FaWhatsapp className="ml-3" title="Whatsapp" />
-            <span className="text-lg mt-1">Whatsapp</span>
+            <FaWhatsapp className="ml-3" title="WhatsApp" />
+            <span className="text-lg mt-1">WhatsApp</span>
           </a>
         </div>
       </div>
