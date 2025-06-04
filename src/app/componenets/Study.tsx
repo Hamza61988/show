@@ -18,7 +18,7 @@ import {
 
 export default function StudyInfo() {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-[#f1f5f9] via-[#e2e8f0] to-[#cbd5e1] flex items-center justify-center py-10 px-4 sm:px-6">
+    <div className="  relative min-h-screen bg-gradient-to-br from-[#f1f5f9] via-[#e2e8f0] to-[#cbd5e1] flex items-center justify-center py-10 px-4 sm:px-6">
       <div className="relative z-10 text-center space-y-8 sm:space-y-10 max-w-4xl mx-auto">
         
        
