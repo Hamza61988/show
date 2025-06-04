@@ -54,7 +54,7 @@ export default function Fulldown() {
           </Swiper>
         </div>
 
-        {/* Mobile Slide Previews */}
+      
         <div className=" sm:hidden">
           {slides.map((slide, index) => (
             <div key={index} className="mt-6 flex  justify-center">
