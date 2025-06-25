@@ -6,6 +6,7 @@ import StudyInfo from "./componenets/Study";
 import MiddleDown from "./componenets/Middledown";
 import Fulldown from "./componenets/Fulldown";
 import Facebook from "./componenets/Facbook";
+import Mobiles from "./componenets/Mobiles";
 
 export default function RootLayout({
   children,
@@ -22,6 +23,7 @@ export default function RootLayout({
           <StudyInfo/> 
                              
       <Middle/>
+      <Mobiles/>
       <Facebook/>  
       <MiddleDown/>  
       <Fulldown/>
