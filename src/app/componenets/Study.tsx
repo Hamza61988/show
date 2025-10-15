@@ -14,6 +14,8 @@ import {
   SiMongodb,
   SiPostgresql,
   SiTailwindcss, 
+    SiNuxtdotjs,
+
 } from 'react-icons/si';
 
 export default function StudyInfo() {
@@ -24,12 +26,11 @@ export default function StudyInfo() {
         <h1 className="text-3xl sm:text-5xl font-extrabold text-[var(--color-text)]">Knowledge</h1>
 
         <p className="text-base sm:text-2xl text-[var(--text-subtle)] font-medium">
-          Currently a student at <strong>UMT Lahore</strong>, I started my programming journey over a year ago.
-          Since then, I've built a solid foundation in full-stack web development.
+       Currently working at T-Zone, where I'm building applications and continuously learning new technologies all while staying in sync with my studies at <span className="font-bold">UMT Lahore.</span> 
         </p>
         
         <p className="text-sm sm:text-xl text-[var(--text-muted)] leading-relaxed font-medium">
-          My focus is on building responsive, scalable web apps using the <strong>MERN stack</strong>, along with database systems like MongoDB and PostgreSQL.
+          My focus is on building responsive, scalable web apps using the <strong>Different stack</strong>, along with database systems
           I'm constantly learning, growing, and excited to contribute to impactful projects.
         </p>
 
@@ -44,6 +45,8 @@ export default function StudyInfo() {
           <SiMongodb title="MongoDB" className="transition-transform duration-300 hover:scale-110" />
           <SiPostgresql title="PostgreSQL" className="transition-transform duration-300 hover:scale-110" />
           <FaDatabase title="SQL/General DB" className="transition-transform duration-300 hover:scale-110" />
+          <SiNuxtdotjs title="Nuxt.js" className="transition-transform duration-300 hover:scale-110" />
+
         </div>
 
         <div className="pt-8 sm:pt-10 space-y-2 sm:space-y-4">

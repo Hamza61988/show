@@ -124,7 +124,7 @@ export default function Home() {
 
               
                 <a
-                  href="/Hamzaibrahim-CV.pdf"
+                  href="/Hamza's Resume.pdf"
                   download
                   className="inline-block mt-5 px-6 py-3 rounded-full hover:opacity-90 transition-colors duration-500  text-sm sm:text-base bg-[var(--color-text)] text-[var(--color-bg)]"
                 >
